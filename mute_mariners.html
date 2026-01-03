@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #2c003e, #4c0077);
+            background-color: #d1a536;
+            background: url('/bg-page.jpg');
             color: #ddd;
             margin: 0;
-            padding: 20px;
+            padding: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,11 +25,12 @@
             display: flex;
             flex-wrap: wrap;
             max-width: 900px;
-            background: #1e1e1e;
+            background: #4b5335;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 4px 10px rgba(255, 223, 94, 0.5);
             width: 100%;
+            padding: 10px;
         }
 
         /* Poster Image */
@@ -52,7 +55,8 @@
             text-align: center;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-size: 24px;
             color: #f8d568;
             display: flex;
@@ -64,7 +68,8 @@
             margin-bottom: 15px;
         }
 
-        p, .info p {
+        p,
+        .info p {
             font-size: 15px;
             margin: 8px 0;
             color: #ddd;
@@ -176,11 +181,13 @@
                 padding: 20px;
             }
 
-            h1, h2 {
+            h1,
+            h2 {
                 font-size: 20px;
             }
 
-            p, .info p {
+            p,
+            .info p {
                 font-size: 14px;
                 gap: 5px;
             }
@@ -192,41 +199,44 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="event-container">
-    <!-- Event Poster -->
-    <div class="event-poster">
-        <img src="eventposters/WhatsApp Image 2025-02-17 at 10.36.24_c49c76af.jpg" alt="Event Poster">
+    <div class="event-container">
+        <!-- Event Poster -->
+        <div class="event-poster">
+            <img src="mute_mariners_mp.jpeg" alt="Event Poster">
+        </div>
+
+        <!-- Event Details -->
+        <div class="event-details">
+            <h1>THE MUTE MARINERS</h1>
+            <p>A silent showdown where teams communicate without words to crack clues under pressure.</p>
+
+            <div class="info">
+                <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> January 28, 2026</p>
+                <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 12:30 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong>DRAWING HALL</p>
+                <p><i class="fas fa-users"></i> <strong>Team Limit: 2 </strong> </p>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxHI6Z1uAmmHHEIs0KW5K64HSLoLjGpXNBRg_1nMrECTzcg/viewform?usp=header"
+                class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
+
+            <!-- Coordinator Info -->
+            <div class="coordinators">
+                <h3>Coordinator Contacts</h3>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong></p>
+                <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +91 </p>
+            </div>
+
+            <div class="rules-section">
+                <h2>Event Rules</h2>
+                <img class="rules-img" src="mute_mariners_rr.jpeg" alt="Event Rules">
+            </div>
+        </div>
     </div>
-
-    <!-- Event Details -->
-    <div class="event-details">
-        <h1>HIDDEN HORIZONS</h1>
-        <P> Embark on a treasure hunt filled with clues and riddles that will test your observation and problem-solving abilities</P>
-
-        <div class="info">
-            <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> March 7, 2025</p>
-            <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:30 AM - 12:30 PM</p>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong> DRAWING HALL</p>
-            <p><i class="fas fa-users"></i> <strong>Team Limit: 2-4</strong> </p>
-        </div>
-
-        <a href="https://forms.gle/kRCKUGrHcTWyMwMW8" class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
-
-        <!-- Coordinator Info -->
-        <div class="coordinators">
-            <h3>Coordinator Contacts</h3>
-            <p><i class="fas fa-user"></i> <strong>Name:</strong> John Doe</p>
-            <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +123 456 7890</p>
-        </div>
-
-        <div class="rules-section">
-            <h2>Event Rules</h2>
-            <img class="rules-img" src="event rules/npn-tech-events/npn tech events_page-0005.jpg" alt="Event Rules">
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>

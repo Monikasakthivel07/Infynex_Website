@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #2c003e, #4c0077);
+            background-color: #d1a536;
+            background: url('/bg-page.jpg');
             color: #ddd;
             margin: 0;
-            padding: 20px;
+            padding: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,11 +25,12 @@
             display: flex;
             flex-wrap: wrap;
             max-width: 900px;
-            background: #1e1e1e;
+            background: #4b5335;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 4px 10px rgba(255, 223, 94, 0.5);
             width: 100%;
+            padding: 10px;
         }
 
         /* Poster Image */
@@ -52,7 +55,8 @@
             text-align: center;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-size: 24px;
             color: #f8d568;
             display: flex;
@@ -64,7 +68,8 @@
             margin-bottom: 15px;
         }
 
-        p, .info p {
+        p,
+        .info p {
             font-size: 15px;
             margin: 8px 0;
             color: #ddd;
@@ -176,11 +181,13 @@
                 padding: 20px;
             }
 
-            h1, h2 {
+            h1,
+            h2 {
                 font-size: 20px;
             }
 
-            p, .info p {
+            p,
+            .info p {
                 font-size: 14px;
                 gap: 5px;
             }
@@ -192,41 +199,45 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="event-container">
-    <!-- Event Poster -->
-    <div class="event-poster">
-        <img src="eventposters/WhatsApp Image 2025-02-17 at 10.36.27_803eef0e.jpg" alt="Event Poster">
+    <div class="event-container">
+        <!-- Event Poster -->
+        <div class="event-poster">
+            <img src="wars_on_wits_mp.jpeg" alt="Event Poster">
+        </div>
+
+        <!-- Event Details -->
+        <div class="event-details">
+            <h1>WARS ON THE WITS</h1>
+            <p>A sharp, time-bound team debate where logic, clarity, and quick thinking reign supreme.
+            </p>
+
+            <div class="info">
+                <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> January 28, 2026</p>
+                <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 12:30 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong>ROOM NO A21(IV IT)</p>
+                <p><i class="fas fa-users"></i> <strong>Team Limit: 3</strong> </p>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxHI6Z1uAmmHHEIs0KW5K64HSLoLjGpXNBRg_1nMrECTzcg/viewform?usp=header"
+                class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
+
+            <!-- Coordinator Info -->
+            <div class="coordinators">
+                <h3>Coordinator Contacts</h3>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> NITHESH D V</p>
+                <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +918122057</p>
+            </div>
+
+            <div class="rules-section">
+                <h2>Event Rules</h2>
+                <img class="rules-img" src="wars_on_wits_rr.jpeg" alt="Event Rules">
+            </div>
+        </div>
     </div>
-
-    <!-- Event Details -->
-    <div class="event-details">
-        <h1>WHITE BOARD WARRIORS</h1>
-        <P>Present your research and innovative ideas to a panel of judges and showcase your technical knowledge</P>
-
-        <div class="info">
-            <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> March 7, 2025</p>
-            <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 12:30 PM</p>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong>3RD FLOOR SEMINAR HALL (OR)  FIRST FLOOR SEMINAR HALL</p>
-            <p><i class="fas fa-users"></i> <strong>Team Limit: 4</strong> </p>
-        </div>
-
-        <a href="https://forms.gle/kRCKUGrHcTWyMwMW8" class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
-
-        <!-- Coordinator Info -->
-        <div class="coordinators">
-            <h3>Coordinator Contacts</h3>
-            <p><i class="fas fa-user"></i> <strong>Name:</strong> DHANALAKSHMI</p>
-            <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +91 81229 13910</p>
-        </div>
-
-        <div class="rules-section">
-            <h2>Event Rules</h2>
-            <img class="rules-img" src="event rules/technical-events/technical events_page-0003.jpg" alt="Event Rules">
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>
