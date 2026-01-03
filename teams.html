@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Coordinators</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+
+        :root{
+            --bg-color:#0c344db5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: white;
+            padding-top: 70px;
+            /* Prevent content from hiding under navbar */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: var(--bg-color);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Navigation Links */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Glow Effect on Hover */
+        .menu a:hover {
+            color: rgb(13, 255, 190);
+            text-shadow: 0 0 10px rgb(13, 255, 190);
+        }
+
+        /* Hamburger Menu */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: black;
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                padding: 15px 0;
+                box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            }
+
+            .menu a {
+                padding: 15px;
+                display: block;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            #menu-toggle:checked~.menu {
+                display: flex;
+            }
+
+            /* Hamburger Animation */
+            #menu-toggle:checked~.menu-icon div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #menu-toggle:checked~.menu-icon div:nth-child(2) {
+                opacity: 0;
+            }
+
+            #menu-toggle:checked~.menu-icon div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* Content Placeholder */
+        .content {
+            text-align: center;
+            padding: 100px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">    
+            <!-- Logo and Name -->
+            <div class="logo">
+                <img src="images_new/logo.jpeg" alt="Logo">
+                INFYNEX
+            </div>
+
+            <!-- Checkbox for menu toggle -->
+            <input type="checkbox" id="menu-toggle">
+
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <div class="menu">
+                <a href="index.html">HOME</a>
+                <a href="events.html">EVENTS</a>
+                <a href="teams.html">TEAM</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </nav
+
+      
+
+   <!-- Main Content -->
+<div class="container">
+    <section class="section">
+        <h2>CONVENOR & STAFF COORDINATORS</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="convenors/Deiva-photo_28.jpg" alt="DR.P.DEIVENDRAN" class="card-img">
+                    </div>
+                    <div class="name">DR.P.DEIVENDRAN</div>
+                    <div class="role">HOD IT</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="convenors/1.png" alt="DR.N.BALAJI" class="card-img">
+                    </div>
+                    <div class="name">DR.N.BALAJI</div>
+                    <div class="role">PRINCIPAL</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="convenors/2.png" alt="DR.S.SOUNDARARAJAN" class="card-img">
+                    </div>
+                    <div class="name">DR.S.SOUNDARARAJAN</div>
+                    <div class="role">VICE-PRINCIPAL</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="convenors/IMG-20250224-WA0021[1].jpg" alt="MS.J.MINI" class="card-img">
+                    </div>
+                    <div class="name">MS.J.MINI</div>
+                    <div class="role">STAFF CO-ORDINATOR</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <!-- Student Coordinators Section -->
+    <section class="section">
+        <h2>STUDENT COORDINATORS</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/monika.jpg" alt="Monika S" class="card-img">
+                    </div>
+                    <div class="name">MONIKA S</div>
+                    <div class="role">STUDENT COORDINATOR</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/Sanju.jpg" alt="Jagadish Kumar S" class="card-img">
+                    </div>
+                    <div class="name">JAGADISH KUMAR S</div>
+                    <div class="role">STUDENT COORDINATOR</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech & Web Lead Section -->
+    <section class="section">
+        <h2>TECH & WEB LEAD</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/Guruprasath.jpg" alt="Guruprasath J" class="card-img">
+                    </div>
+                    <div class="name">GURUPRASATH J</div>
+                    <div class="role">WEB DEVELOPER</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Design Heads Section -->
+    <section class="section">
+        <h2>MEDIA & DESIGN HEADS</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/nithish.jpg" alt="Nithish E" class="card-img">
+                    </div>
+                    <div class="name">NITHISH E</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/Guruprasath.jpg" alt="Guruprasath J" class="card-img">
+                    </div>
+                    <div class="name">GURUPRASATH J</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/Sanju.jpg" alt="Nithish E" class="card-img">
+                    </div>
+                    <div class="name">JAGADISH KUMAR S</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/inbarasan.jpg" alt="Inbarasan" class="card-img">
+                    </div>
+                    <div class="name">INBARASAN</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/hemanth bhavan.jpg" alt="Hemanth Bhavan" class="card-img">
+                    </div>
+                    <div class="name">HEMANTH BHAVAN</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/abishek.jpg" alt="Abhishek" class="card-img">
+                    </div>
+                    <div class="name">ABHISHEK</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/naveen.jpg" alt="Naveen" class="card-img">
+                    </div>
+                    <div class="name">NAVEEN</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/WhatsApp Image 2025-02-17 at 23.10.58_2992a990.jpg" alt="Sanjaykanth" class="card-img">
+                    </div>
+                    <div class="name">SANJAYKANTH</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/SIVAM 2.jpg" alt="Sivam" class="card-img">
+                    </div>
+                    <div class="name">SIVAM</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-img">
+                        <img src="photos/pugal.jpg" alt="Vignesh" class="card-img">
+                    </div>
+                    <div class="name">VIGNESH</div>
+                    <div class="role">GRAPHIC DESIGNER</div>
+                </div>
+            </div>
+        </div> <!-- Closing the .grid div properly -->
+    </section>
+
+    <!-- Tech Quest Coordinators Section -->
+<section class="section">
+    <h2>TECH QUEST</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/Guruprasath.jpg" alt="Guruprasath J">
+                </div>
+                <div class="name">GURUPRASATH J</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/irfana.jpg" alt="Irfana">
+                </div>
+                <div class="name">IRFANA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/suriya m.jpg" alt="Suriya M">
+                </div>
+                <div class="name">SURIYA M</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/suriya vg 1.jpg" alt="Suriya VG">
+                </div>
+                <div class="name">SURYAA VG</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/lathika.jpg" alt="Lathika">
+                </div>
+                <div class="name">LATHIKA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/Akshaya.jpg" alt="Lathika">
+                </div>
+                <div class="name">AKSHAYA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Frontend Fiesta Coordinators Section -->
+<section class="section">
+    <h2>FRONTEND FIESTA</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/pugal.jpg" alt="Vignesh">
+                </div>
+                <div class="name">VIGNESH</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/vignesh.jpg" alt="Pugazhenthi">
+                </div>
+                <div class="name">PUGAZHENTHI</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Codebid Coordinators Section -->
+<section class="section">
+    <h2>CODEBID</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/dileep.jpg" alt="Dileep">
+                </div>
+                <div class="name">DILEEP</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/munivel.jpg" alt="Munivel">
+                </div>
+                <div class="name">MUNIVEL</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/hemanth'.jpg" alt="Hemanth Kumar">
+                </div>
+                <div class="name">HEMANTH KUMAR</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bug Brawl Coordinators Section -->
+<section class="section">
+    <h2>BUG BRAWL</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/sathaiyan.jpg" alt="Sathaiyan">
+                </div>
+                <div class="name">SATHAIYAN R</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/balaji.jpg" alt="Sathaiyan">
+                </div>
+                <div class="name">HARISH BALAJI S</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/pradeep.jpg" alt="Pradeep S">
+                </div>
+                <div class="name">PRADEEP S</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Whiteboy Warriors Coordinators Section -->
+<section class="section">
+    <h2>WHITEBOARD WARRIORS</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/geedhavarshini1.jpg" alt="Geedhavarshini">
+                </div>
+                <div class="name">GEEDHAVARSHINI</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/priyanka.jpg" alt="Priyanka">
+                </div>
+                <div class="name">PRIYANKA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/sivadharini.jpg" alt="Sivadharini">
+                </div>
+                <div class="name">SIVADHARINI</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Aurora Vibes Coordinators Section -->
+<section class="section">
+    <h2>AURORA VIBES</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/priyavarshini.jpg" alt="Priyavarshini RR">
+                </div>
+                <div class="name">PRIYAVARSHINI RR</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/akash raj.jpg" alt="Akash Raj B">
+                </div>
+                <div class="name">AKASH RAJ B</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Aggressive Shooters Coordinators Section -->
+<section class="section">
+    <h2>AGGRESSIVE SHOOTERS</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/srikanth.jpg" alt="Srikanth AS">
+                </div>
+                <div class="name">SRIKANTH AS</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/WhatsApp Image 2025-02-04 at 08.43.23_966935fe.jpg" alt="Subash T">
+                </div>
+                <div class="name">SUBASH T</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/hemanth jr.jpg" alt="Subash T">
+                </div>
+                <div class="name">HEMANTH</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden Horizons Coordinators Section -->
+<section class="section">
+    <h2>HIDDEN HORIZONS</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/thrisha.jpg" alt="Thirisha">
+                </div>
+                <div class="name">THIRISHA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/haritha.jpg" alt="Haritha">
+                </div>
+                <div class="name">HARITHA</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden Horizons Coordinators Section -->
+<section class="section">
+    <h2>CINEMA CLASH</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/hem  soundar.jpg" alt="Thirisha">
+                </div>
+                <div class="name">HEMSOUNDAR B U</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/faiz.jpg" alt="Haritha">
+                </div>
+                <div class="name">MOHAMMED  FAIZ B</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/sri ram.jpg" alt="Haritha">
+                </div>
+                <div class="name">SRIRAMKUMAR V</div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Boyaah Bash Coordinators Section -->
+<section class="section">
+    <h2>BOOYAH BASH</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/SIVAM 2.jpg" alt="Thirisha">
+                </div>
+                <div class="name">SIVAM </div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="" alt="??">
+                </div>
+                <div class="name"></div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VERBAL VORTEX Coordinators Section -->
+<section class="section">
+    <h2>VERBAL VORTEX</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="photos/sai lakshmi.jpg" alt="Thirisha">
+                </div>
+                <div class="name">SAILAKSHMI </div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="" alt="??">
+                </div>
+                <div class="name"></div>
+                <div class="role">Coordinator</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</div> <!-- Closing the .container div properly -->
+
+<style>/* Footer Container */
+    .footer-container {
+        background:transparent;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    /* Map Section */
+    .footer-map h3 {
+        color: #ffd700; /* Metallic gold */
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    
+    /* Icons Section */
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 20px;
+    }
+    
+    .icon {
+        text-align: center;
+        font-size: 24px;
+        transition: transform 0.3s, color 0.3s;
+    }
+    
+    .icon i {
+        color: #ffd700; /* Metallic Gold */
+        background:transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+    }
+    
+    .icon span {
+        display: block;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    .icon:hover {
+        transform: scale(1.2);
+        color: #ffcc00;
+    }
+    
+    /* Landscape Image */
+    .footer-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 50%; /* Reduced size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Increased glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.footer-image img:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+}
+
+    
+    /* Footer Bottom */
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .footer-bottom a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .footer-bottom a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+
+        <!-- Landscape Image -->
+        <div class="footer-image">
+            <img src="images/footer image.png" alt="Landscape Image">
+        </div>
+
+        <!-- Copyright & Credit -->
+        <div class="footer-bottom">
+            <p>© 2025 ELYSIUM. All rights reserved. | Designed by 
+                <a href="https://www.linkedin.com/in/guruprasath-j-9006b3277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Guruprasath J</a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="images_new/Backgroud_themes/bg-4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <style>
+        .bg-video {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+      </style>
+    
+    <script src="script3.js"></script>
+
+</body>
+</html>

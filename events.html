@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="script2.js" defer></script>
+    <title>EVENTS</title>
+</head>
+
+<body>
+    <style>
+
+        :root{
+            --bg-color:#0c344db5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: white;
+            padding-top: 70px;
+            /* Prevent content from hiding under navbar */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: var(--bg-color);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Navigation Links */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Glow Effect on Hover */
+        .menu a:hover {
+            color: rgb(13, 255, 190);
+            text-shadow: 0 0 10px rgb(13, 255, 190);
+        }
+
+        /* Hamburger Menu */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: black;
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                padding: 15px 0;
+                box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            }
+
+            .menu a {
+                padding: 15px;
+                display: block;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            #menu-toggle:checked~.menu {
+                display: flex;
+            }
+
+            /* Hamburger Animation */
+            #menu-toggle:checked~.menu-icon div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #menu-toggle:checked~.menu-icon div:nth-child(2) {
+                opacity: 0;
+            }
+
+            #menu-toggle:checked~.menu-icon div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* Content Placeholder */
+        .content {
+            text-align: center;
+            padding: 100px;
+            font-size: 24px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <nav class="navbar">    
+            <!-- Logo and Name -->
+            <div class="logo">
+                <img src="logo.jpeg" alt="Logo">
+                INFYNEX
+            </div>
+
+            <!-- Checkbox for menu toggle -->
+            <input type="checkbox" id="menu-toggle">
+
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <div class="menu">
+                <a href="index.html">HOME</a>
+                <a href="events.html">EVENTS</a>
+                <!-- <a href="teams.html">TEAM</a> -->
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </nav>
+        <div class="bg"></div>
+        <h1 class="title1">Technical Events</h1>
+        <div class="container">
+            <!-- Technical Events -->
+            <div class="card">
+                <div class="card-inner">
+                    <!-- <div class="card-front" style="background-image: url('images_new/theme_posters/web_corsaries_tp.jpeg');"></div> -->
+                    <div class="card-front" style="background-image: url('Prompt_Voyage_tp.jpeg');"></div>
+
+                    <div class="card-back">
+                        <h2>PROMPT VOYAGE</h2>
+                        <p>A competitive Prompt Engineering event where participants craft smart prompts to control and optimize AI outputs. </p>
+                        <!-- From Uiverse.io by Madflows -->
+                        <a href="techquest.html">   
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('pirate_papers_tp.jpeg');"></div>
+                    <!-- <div class="card-front" style="background-image: url('images_new/theme_posters/web_corsaries_tp.jpeg');"></div> -->
+                    <div class="card-back">
+                        <h2>PIRATE PAPERS</h2>
+                        <p>A challenge to design and develop innovative web applications</p>
+                        <a href="frontendfiesta.html">
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('WebCorsaries_tp.jpeg');"></div>
+                    <div class="card-back">
+                        <h2>WEB CORSAIRES</h2>
+                        <p>A competitive quiz designed to test participants’ technical knowledge and innovative thinking.</p>
+                        <a href="bugbrawl.html">
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('curse_of_code_tp.jpeg');"></div>
+                    <div class="card-back">
+                        <h2>CURSE OF CODE</h2>
+                        <p>A unique event where participants bid on coding problems and solve them</p>
+                        <a href="codebid.html">
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('th');">
+                    </div>
+                    <div class="card-back">
+                        <h2>THE CAPTION'S QUEST</h2>
+                        <p>A platform to present research and innovative technical ideas.</p>
+                        <a href="whiteboardwarriors.html">
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('.jpg');"></div>
+                    <div class="card-back">
+                        <h2>SAIL THE INTERFACE</h2>
+                        <p>A discussion-based event on emerging technologies and trends.</p>
+                        <a href="verbalvortex.html">
+                            <button class="button">
+                                <span class="button-content">DETAILS</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Technical Events -->
+            <h1 class="title2">Non-Tech Events</h1>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('Event Images/Aurora vibes.jpg');"></div>
+                        <div class="card-back">
+                            <h2>THE MUTE MARINERS</h2>
+                            <p>A vibrant celebration of music with live performances and competitions</p>
+                            <a href="auroravibes.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('Event Images/Booyah BAsh.jpg');"></div>
+                        <div class="card-back">
+                            <h2>DOCK AND ROCK</h2>
+                            <p>An intense battle royale gaming showdown.</p>
+                            <a href="booyahbash.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('words_on_the_waves_tp.jpeg');">
+                        </div>
+                        <div class="card-back">
+                            <h2>WORDS ON THE WAVES</h2>
+                            <p>A fast-paced, small-format cricket challenge.</p>
+                            <a href="agressiveshooters.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('wars_on_wits_tp.jpeg');">
+                        </div>
+                        <div class="card-back">
+                            <h2>WAR OF WITS</h2>
+                            <p>A thrilling quest to decode clues and find hidden treasure</p>
+                            <a href="hiddenhorizons.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('Event Images/cinema clash.jpg');"></div>
+                        <div class="card-back">
+                            <h2>LOOT AND SHOOT</h2>
+                            <p>A fun challenge testing movie knowledge and pop culture</p>
+                            <a href="cinemaclash.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front" style="background-image: url('sea_dog_showroom_rr.jpeg');"></div>
+                        <div class="card-back">
+                            <h2>AUCTION</h2>
+                            <p>A creative storytelling contest with unexpected twists</p>
+                            <a href="spinastory.html">
+                                <button class="button">
+                                    <span class="button-content">DETAILS</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <video autoplay loop muted playsinline class="bg-video">
+            <source src='bg-1.mp4'
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <style>
+            .bg-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+        </style>
+        <!-- Footer -->
+        <style>
+            /* Footer Container */
+            .footer-container {
+                background: transparent;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+
+            /* Map Section */
+            .footer-map h3 {
+                color: #ffd700;
+                /* Metallic gold */
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            /* Icons Section */
+            .footer-icons {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                margin-top: 20px;
+            }
+
+            .icon {
+                text-align: center;
+                font-size: 24px;
+                transition: transform 0.3s, color 0.3s;
+            }
+
+            .icon i {
+                color: #ffd700;
+                /* Metallic Gold */
+                background: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 40px;
+            }
+
+            .icon span {
+                display: block;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            .icon:hover {
+                transform: scale(1.2);
+                color: #ffcc00;
+            }
+
+            /* Landscape Image */
+            .footer-image {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .footer-image img {
+                width: 50%;
+                /* Reduced size */
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+                /* Increased glow effect */
+                transition: box-shadow 0.3s ease-in-out;
+            }
+
+            .footer-image img:hover {
+                box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+                /* Stronger glow on hover */
+            }
+
+
+            /* Footer Bottom */
+            .footer-bottom {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            .footer-bottom a {
+                color: #ffd700;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .footer-bottom a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+
+                <!-- Landscape Image -->
+                <div class="footer-image">
+                    <img src="images/footer image.png" alt="Landscape Image">
+                </div>
+
+                <!-- Copyright & Credit -->
+                <div class="footer-bottom">
+                    <p>© 2025 ELYSIUM. All rights reserved. | Designed by
+                        <a href="https://www.linkedin.com/in/guruprasath-j-9006b3277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank">Guruprasath J</a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>
