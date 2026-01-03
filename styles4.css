@@ -11,10 +11,10 @@ body {
     color: #fff;
     overflow-x: visible;
     position: relative;
-     cursor: url('images_new/cursor/anchor.cur'), auto;
+     cursor: url('anchor.cur'), auto;
 }
 a:hover, button:hover {
-    cursor: url('images_new/cursor/flag.cur'), pointer;
+    cursor: url('flag.cur'), pointer;
   }
 .lobster-regular {
     font-family: "Lobster", serif;

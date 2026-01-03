@@ -74,7 +74,7 @@ h2 {
 }
 
 #promo {
-    background-image: url(3309587.webp');
+    background-image: url('3309587.webp');
     
 }
 
@@ -605,7 +605,7 @@ h1, h2, h3 {
 /* Subsection Headings */
 .subsection h3 {
     font-size: 24px;
-    linear-gradient(to right, rgba(255, 224, 50, 0.785), #494b4d);
+    background: (to right, rgba(255, 224, 50, 0.785), #494b4d);
     color: #ffd700;
 }
 
