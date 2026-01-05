@@ -1,6 +1,152 @@
+:root {
+  --bg-color: #0c344db5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: var(--bg-color);
+  color: white;
+  padding-top: 70px;
+  /* Prevent content from hiding under navbar */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: var(--bg-color);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation Links */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Glow Effect on Hover */
+.menu a:hover {
+  color: rgb(13, 255, 190);
+  text-shadow: 0 0 10px rgb(13, 255, 190);
+}
+
+/* Hamburger Menu */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 4px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: black;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .menu a {
+    padding: 15px;
+    display: block;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  #menu-toggle:checked~.menu {
+    display: flex;
+  }
+
+  /* Hamburger Animation */
+  #menu-toggle:checked~.menu-icon div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menu-toggle:checked~.menu-icon div:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked~.menu-icon div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Content Placeholder */
+.content {
+  text-align: center;
+  padding: 100px;
+  font-size: 24px;
+}
+
 /* General Layout */
 body {
-  background: url('images_new/Backgroud_themes/bg-3.mp4');
+  background: url('bg-3.mp4');
   font-family: "Outfit", serif;
   margin: 0;
   padding: 0;
@@ -43,7 +189,7 @@ button:hover {
 .card {
   width: 100%;
   height: 320px;
-  background: transparent;
+  background: #387ef0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,9 +365,9 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 3px 1px #00000088;
+  /* box-shadow: 1px 1px #ffffff8e; */
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: transform 300ms;
 }
 
@@ -237,7 +383,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: white;
+  color: rgb(131, 255, 216);
   z-index: 1;
   text-align: center;
 }
@@ -251,7 +397,7 @@ body {
 
 /* Footer Styling */
 .footer {
-  background-color: #171717;
+  background-color: #534646;
   color: #fff;
   text-align: center;
   padding: 10px 0;
@@ -396,9 +542,11 @@ h2 {
   color: white;
   /* White inner text */
   text-shadow:
-    0px 0px 5px #c8f60f,
+    0px 0px 5px #3fd100,
     0px 0px 10px #d3ad13;
   /* Neon green glow */
   background: none;
+  margin-left: 20px;
   /* No background */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
