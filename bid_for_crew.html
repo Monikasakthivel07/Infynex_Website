@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,8 @@
             text-align: center;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-size: 24px;
             color: #f8d568;
             display: flex;
@@ -66,7 +68,8 @@
             margin-bottom: 15px;
         }
 
-        p, .info p {
+        p,
+        .info p {
             font-size: 15px;
             margin: 8px 0;
             color: #ddd;
@@ -154,6 +157,47 @@
             transform: scale(1.05);
         }
 
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .event-container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .event-poster {
+                border-right: none;
+                border-bottom: 5px solid #f8d568;
+                width: 100%;
+            }
+
+            .event-poster img {
+                width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            .event-details {
+                text-align: center;
+                padding: 20px;
+            }
+
+            h1,
+            h2 {
+                font-size: 20px;
+            }
+
+            p,
+            .info p {
+                font-size: 14px;
+                gap: 5px;
+            }
+
+            .register-btn {
+                font-size: 14px;
+                max-width: 100%;
+            }
+        }
+        
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .event-container {
@@ -289,43 +333,48 @@
     }
 
 }
+
     </style>
 </head>
+
 <body>
 
-<div class="event-container">
-    <!-- Event Poster -->
-    <div class="event-poster">
-        <img src="Prompt_Voyage_mp.jpeg" alt="Event Poster">
+    <div class="event-container">
+        <!-- Event Poster -->
+        <div class="event-poster">
+            <img src="bid_for_crew_mp.jpeg" alt="Event Poster">
+        </div>
+
+        <!-- Event Details -->
+        <div class="event-details">
+            <h1>BID FOR CREW</h1>
+            <p>A creative storytelling contest with unexpected twists
+            </p>
+
+            <div class="info">
+                <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> January 28, 2026</p>
+                <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 12:30 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong>AIDS SEMINAR HALL</p>
+                <p><i class="fas fa-users"></i> <strong>Team Limit: 3</strong> </p>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxHI6Z1uAmmHHEIs0KW5K64HSLoLjGpXNBRg_1nMrECTzcg/viewform?usp=header"
+                class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
+
+            <!-- Coordinator Info -->
+            <div class="coordinators">
+                <h3>Coordinator Contacts</h3>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> VEERAPATHIRAN Y</p>
+                <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +91 7418683027</p>
+            </div>
+
+            <div class="rules-section">
+                <h2>Event Rules</h2>
+                <img class="rules-img" src="bid_for_crew_rr.jpeg" alt="Event Rules">
+            </div>
+        </div>
     </div>
-
-    <!-- Event Details -->
-    <div class="event-details">
-        <h1>Prompt Voyage</h1>
-        <p>Craft powerful prompts to master AI behavior and maximize output precision. 🚀</p>
-
-        <div class="info">
-            <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> January 28, 2026</p>
-            <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 12:30 PM</p>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong>IT LAB-2</p>
-            <p><i class="fas fa-users"></i> <strong>Team Limit: 2 (Solo allowed)</strong> </p>
-        </div>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxHI6Z1uAmmHHEIs0KW5K64HSLoLjGpXNBRg_1nMrECTzcg/viewform?usp=header" class="register-btn"><i class="fas fa-edit"></i> Register Now</a>
-
-        <!-- Coordinator Info -->
-        <div class="coordinators">
-            <h3>Coordinator Contacts</h3>
-            <p><i class="fas fa-user"></i> <strong>Name:</strong>Geedhavarshini V</p>
-            <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +91 6379267643</p>
-        </div>
-
-        <div class="rules-section">
-            <h2>Event Rules</h2>
-            <img class="rules-img" src="Prompt_Voyage_rr.jpeg" alt="Event Rules">
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>
